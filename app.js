@@ -8,6 +8,10 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 var app = express();
+app.get("/api/hello", (req, res) => {
+  res.json({ message: "Hello Xlora 👋" });
+})
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

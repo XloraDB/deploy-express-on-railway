@@ -9,6 +9,9 @@ router.get('/', function(req, res, next) {
     .then(function (data) {
       // Render the page only after receiving the data
       res.render('index', { title: 'Hello World, Railway!', timeFromDB: data.now });
+      router.get('/api/hello', (req, res) => {
+  res.json({ message: 'Hello Xlora 👋' });
+});
     })
     .catch(function (error) {
       console.error("ERROR:", error);
